@@ -1,0 +1,398 @@
+
+🔹 Sentence: Dr. Mayling Capuno
+Dean
+University of Batangas Lipa City
+Subject: Request for Approval of Hybrid Work Setup for Internship/OJT
+Dear Dr. Mayling,
+
+Token          POS       Dependency     Head
+==================================================
+Dr.            PROPN     compound       Capuno
+Mayling        PROPN     compound       Capuno
+Capuno         PROPN     compound       University
+
+              SPACE     dep            Capuno
+Dean           PROPN     compound       University
+
+              SPACE     dep            Dean
+University     PROPN     nmod           Subject
+of             ADP       prep           University
+Batangas       PROPN     pobj           of
+Lipa           PROPN     compound       City
+City           PROPN     compound       Subject
+
+              SPACE     dep            City
+Subject        PROPN     ROOT           Subject
+:              PUNCT     punct          Subject
+Request        NOUN      appos          Subject
+for            ADP       prep           Request
+Approval       PROPN     pobj           for
+of             ADP       prep           Approval
+Hybrid         PROPN     compound       Setup
+Work           PROPN     compound       Setup
+Setup          PROPN     pobj           of
+for            ADP       prep           Setup
+Internship     PROPN     nmod           OJT
+/              SYM       punct          OJT
+OJT            PROPN     compound       Mayling
+
+              SPACE     dep            OJT
+Dear           ADJ       amod           Mayling
+Dr.            PROPN     compound       Mayling
+Mayling        PROPN     pobj           for
+,              PUNCT     punct          Subject
+
+              SPACE     dep            ,
+
+🔹 Sentence: I hope you are doing well.
+Token          POS       Dependency     Head
+==================================================
+I              PRON      nsubj          hope
+hope           VERB      ROOT           hope
+you            PRON      nsubj          doing
+are            AUX       aux            doing
+doing          VERB      ccomp          hope
+well           ADV       advmod         doing
+.              PUNCT     punct          hope
+
+🔹 Sentence: I am writing on behalf of our group currently undergoing our Internship/OJT at Hacienda Darasa Resort & Hotel to formally seek your approval for a hybrid work setup.
+Token          POS       Dependency     Head
+==================================================
+I              PRON      nsubj          writing
+am             AUX       aux            writing
+writing        VERB      ROOT           writing
+on             ADP       prep           writing
+behalf         NOUN      pobj           on
+of             ADP       prep           behalf
+our            PRON      poss           group
+group          NOUN      pobj           of
+currently      ADV       advmod         undergoing
+undergoing     VERB      advcl          writing
+our            PRON      poss           OJT
+Internship     PROPN     nmod           OJT
+/              SYM       punct          OJT
+OJT            PROPN     dobj           undergoing
+at             ADP       prep           undergoing
+Hacienda       PROPN     compound       Resort
+Darasa         PROPN     compound       Resort
+Resort         PROPN     pobj           at
+&              CCONJ     cc             Resort
+Hotel          PROPN     conj           Resort
+to             PART      aux            seek
+formally       ADV       advmod         seek
+seek           VERB      xcomp          undergoing
+your           PRON      poss           approval
+approval       NOUN      dobj           seek
+for            ADP       prep           approval
+a              DET       det            setup
+hybrid         ADJ       amod           setup
+work           NOUN      compound       setup
+setup          NOUN      pobj           for
+.              PUNCT     punct          writing
+
+🔹 Sentence: The management of Hacienda Darasa has decided that we will follow a hybrid arrangement, and we would like to request the university’s permission to proceed accordingly.
+
+Token          POS       Dependency     Head
+==================================================
+The            DET       det            management
+management     NOUN      nsubj          decided
+of             ADP       prep           management
+Hacienda       PROPN     compound       Darasa
+Darasa         PROPN     pobj           of
+has            AUX       aux            decided
+decided        VERB      ROOT           decided
+that           SCONJ     mark           follow
+we             PRON      nsubj          follow
+will           AUX       aux            follow
+follow         VERB      ccomp          decided
+a              DET       det            arrangement
+hybrid         ADJ       amod           arrangement
+arrangement    NOUN      dobj           follow
+,              PUNCT     punct          decided
+and            CCONJ     cc             decided
+we             PRON      nsubj          like
+would          AUX       aux            like
+like           VERB      conj           decided
+to             PART      aux            request
+request        VERB      xcomp          like
+the            DET       det            university
+university     NOUN      poss           permission
+’s             PART      case           university
+permission     NOUN      dobj           request
+to             PART      aux            proceed
+proceed        VERB      acl            permission
+accordingly    ADV       advmod         proceed
+.              PUNCT     punct          like
+
+              SPACE     dep            .
+
+🔹 Sentence: The proposed schedule is as follows:
+On-Site Work: Monday, Tuesday, and
+Token          POS       Dependency     Head
+==================================================
+The            DET       det            schedule
+proposed       VERB      amod           schedule
+schedule       NOUN      nsubj          is
+is             AUX       ROOT           is
+as             SCONJ     mark           follows
+follows        VERB      advcl          is
+:              PUNCT     punct          Work
+
+              SPACE     dep            :
+On             ADP       nmod           Work
+-              PUNCT     punct          On
+Site           NOUN      pobj           On
+Work           NOUN      appos          schedule
+:              PUNCT     punct          Work
+Monday         PROPN     appos          Work
+,              PUNCT     punct          Monday
+Tuesday        PROPN     appos          Monday
+,              PUNCT     punct          Monday
+and            CCONJ     cc             Monday
+
+🔹 Sentence: Friday
+Work-from-Home: Wednesday and Thursday
+
+Token          POS       Dependency     Head
+==================================================
+Friday         PROPN     compound       Work
+
+              SPACE     dep            Friday
+Work           PROPN     ROOT           Work
+-              PUNCT     punct          Work
+from           ADP       prep           Work
+-              PUNCT     punct          from
+Home           NOUN      pobj           from
+:              PUNCT     punct          Work
+Wednesday      PROPN     appos          Work
+and            CCONJ     cc             Wednesday
+Thursday       PROPN     conj           Wednesday
+
+              SPACE     dep            Thursday
+
+🔹 Sentence: This setup will allow us to effectively fulfill our internship tasks while maintaining productivity in both physical and remote environments.
+Token          POS       Dependency     Head
+==================================================
+This           DET       det            setup
+setup          NOUN      nsubj          allow
+will           AUX       aux            allow
+allow          VERB      ROOT           allow
+us             PRON      nsubj          fulfill
+to             PART      aux            fulfill
+effectively    ADV       advmod         fulfill
+fulfill        VERB      ccomp          allow
+our            PRON      poss           tasks
+internship     NOUN      compound       tasks
+tasks          NOUN      dobj           fulfill
+while          SCONJ     mark           maintaining
+maintaining    VERB      advcl          fulfill
+productivity   NOUN      dobj           maintaining
+in             ADP       prep           maintaining
+both           CCONJ     preconj        physical
+physical       ADJ       amod           environments
+and            CCONJ     cc             physical
+remote         ADJ       conj           physical
+environments   NOUN      pobj           in
+.              PUNCT     punct          allow
+
+🔹 Sentence: We are committed to ensuring that all responsibilities are completed efficiently and will remain fully accessible through the necessary communication and project management tools during our work-from-home days.
+
+Token          POS       Dependency     Head
+==================================================
+We             PRON      nsubj          are
+are            AUX       ROOT           are
+committed      ADJ       acomp          are
+to             ADP       prep           committed
+ensuring       VERB      pcomp          to
+that           SCONJ     mark           completed
+all            DET       det            responsibilities
+responsibilitiesNOUN      nsubjpass      completed
+are            AUX       auxpass        completed
+completed      VERB      ccomp          ensuring
+efficiently    ADV       advmod         completed
+and            CCONJ     cc             completed
+will           AUX       aux            remain
+remain         VERB      conj           completed
+fully          ADV       advmod         accessible
+accessible     ADJ       acomp          remain
+through        ADP       prep           remain
+the            DET       det            tools
+necessary      ADJ       amod           tools
+communication  NOUN      nmod           tools
+and            CCONJ     cc             communication
+project        NOUN      compound       management
+management     NOUN      conj           communication
+tools          NOUN      pobj           through
+during         ADP       prep           remain
+our            PRON      poss           days
+work           NOUN      nmod           days
+-              PUNCT     punct          work
+from           ADP       prep           work
+-              PUNCT     punct          from
+home           NOUN      pobj           from
+days           NOUN      pobj           during
+.              PUNCT     punct          are
+
+              SPACE     dep            .
+
+🔹 Sentence: We kindly seek your approval for this arrangement.
+Token          POS       Dependency     Head
+==================================================
+We             PRON      nsubj          seek
+kindly         ADV       advmod         seek
+seek           VERB      ROOT           seek
+your           PRON      poss           approval
+approval       NOUN      dobj           seek
+for            ADP       prep           approval
+this           DET       det            arrangement
+arrangement    NOUN      pobj           for
+.              PUNCT     punct          seek
+
+🔹 Sentence: Please let us know if there are any requirements or further discussions needed regarding this request.
+Token          POS       Dependency     Head
+==================================================
+Please         INTJ      intj           let
+let            VERB      ROOT           let
+us             PRON      nsubj          know
+know           VERB      ccomp          let
+if             SCONJ     mark           are
+there          PRON      expl           are
+are            VERB      ccomp          know
+any            DET       det            requirements
+requirements   NOUN      attr           are
+or             CCONJ     cc             requirements
+further        ADJ       amod           discussions
+discussions    NOUN      conj           requirements
+needed         VERB      acl            discussions
+regarding      VERB      prep           needed
+this           DET       det            request
+request        NOUN      pobj           regarding
+.              PUNCT     punct          let
+
+🔹 Sentence: We appreciate your time and consideration and look forward to your guidance.
+Thank you for your support.
+
+Token          POS       Dependency     Head
+==================================================
+We             PRON      nsubj          appreciate
+appreciate     VERB      ROOT           appreciate
+your           PRON      poss           time
+time           NOUN      dobj           appreciate
+and            CCONJ     cc             time
+consideration  NOUN      conj           time
+and            CCONJ     cc             appreciate
+look           VERB      conj           appreciate
+forward        ADV       advmod         look
+to             ADP       prep           look
+your           PRON      poss           guidance
+guidance       NOUN      pobj           to
+.              PUNCT     punct          appreciate
+
+              SPACE     dep            .
+Thank          VERB      ccomp          appreciate
+you            PRON      dobj           Thank
+for            ADP       prep           Thank
+your           PRON      poss           support
+support        NOUN      pobj           for
+.              PUNCT     punct          Thank
+
+              SPACE     dep            .
+
+🔹 Sentence: Sincerely,
+Juan Miguel C. Torres
+BSIT 4-A 
+On behalf of the UB students interning at Hacienda Darasa Garden Resort & Hotel
+List of Students Interning at Hacienda Darasa Garden Resort & Hotel:
+Juan Miguel C. Torres
+Christian P. Cabalhin
+Michael Ronin R. Inovejas
+Alexis C. Visperas
+Althea Lois L. Castro
+Shane Frankie L. Keh
+Jewel Marie A. Ordanza
+Token          POS       Dependency     Head
+==================================================
+Sincerely      ADV       advmod         Ordanza
+,              PUNCT     punct          Torres
+
+              SPACE     dep            ,
+Juan           PROPN     compound       Torres
+Miguel         PROPN     compound       Torres
+C.             PROPN     compound       Torres
+Torres         PROPN     poss           Ordanza
+
+              SPACE     dep            Torres
+BSIT           PROPN     compound       A
+4              NUM       npadvmod       BSIT
+-              PUNCT     punct          A
+A              NOUN      dobj           Torres
+
+              SPACE     dep            A
+On             ADP       prep           Torres
+behalf         NOUN      pobj           On
+of             ADP       prep           behalf
+the            DET       det            students
+UB             PROPN     compound       students
+students       NOUN      pobj           of
+interning      VERB      acl            students
+at             ADP       prep           interning
+Hacienda       PROPN     compound       Resort
+Darasa         PROPN     compound       Resort
+Garden         PROPN     compound       Resort
+Resort         PROPN     pobj           at
+&              CCONJ     cc             Resort
+Hotel          PROPN     compound       List
+
+              SPACE     dep            Hotel
+List           PROPN     conj           Resort
+of             ADP       prep           List
+Students       PROPN     pobj           of
+Interning      VERB      conj           Torres
+at             ADP       prep           Interning
+Hacienda       PROPN     compound       Resort
+Darasa         PROPN     compound       Resort
+Garden         PROPN     compound       Resort
+Resort         PROPN     pobj           at
+&              CCONJ     cc             Resort
+Hotel          PROPN     conj           Resort
+:              PUNCT     punct          Torres
+
+              SPACE     dep            :
+Juan           PROPN     compound       Torres
+Miguel         PROPN     compound       Torres
+C.             PROPN     compound       Torres
+Torres         PROPN     appos          Torres
+
+              SPACE     dep            Torres
+Christian      PROPN     compound       Cabalhin
+P.             PROPN     compound       Cabalhin
+Cabalhin       PROPN     compound       Visperas
+
+              SPACE     dep            Cabalhin
+Michael        PROPN     compound       Visperas
+Ronin          PROPN     compound       Visperas
+R.             PROPN     compound       Visperas
+Inovejas       PROPN     compound       Visperas
+
+              SPACE     dep            Inovejas
+Alexis         PROPN     compound       Visperas
+C.             PROPN     compound       Visperas
+Visperas       PROPN     appos          Torres
+
+              SPACE     dep            Visperas
+Althea         PROPN     compound       Ordanza
+Lois           PROPN     compound       Ordanza
+L.             PROPN     compound       Castro
+Castro         PROPN     compound       Ordanza
+
+              SPACE     dep            Castro
+Shane          PROPN     compound       Ordanza
+Frankie        PROPN     compound       Ordanza
+L.             PROPN     compound       Keh
+Keh            PROPN     compound       Ordanza
+
+              SPACE     dep            Keh
+Jewel          PROPN     compound       Ordanza
+Marie          PROPN     compound       Ordanza
+A.             NOUN      compound       Ordanza
+Ordanza        PROPN     ROOT           Ordanza
