@@ -1,7 +1,7 @@
 import sys
 sys.path.append("scripts")
 
-from docx_processor import ReadDocument, ConvertDocument, CreateDocument
+from docx_processor import ReadDocument, ConvertDocument, CreateTextFile ,CreateDocument
 from nlp_processor import DisplaySents, DisplayEnts, DisplayTokenDetails
 from nlp_processor import GetSents, GetEnts, GetTokenDetails
 
@@ -14,5 +14,9 @@ with open ("texts/hybrid_setup_letter.txt", "r") as f:
 
 # DisplayTokenDetails(text)
 
-txt = GetTokenDetails(text)
-CreateDocument(txt, "text.txt")
+# txt = GetTokenDetails(text)
+
+# txt = GetEnts(text)
+
+txt = GetSents(text)
+CreateTextFile(txt, "Ents.txt")

@@ -24,6 +24,9 @@ def ReadDocument(filename):
     print(paragraphs)
 
 
-def CreateDocument(text, filename):
-    with open(f"../texts/{filename}", "w") as f:
+def CreateTextFile(text, filename):
+    with open(f"texts/{filename}", "w", encoding="utf-8") as f:
         f.write(text)
+
+def CreateDocument(text, filename):
+    print("something")

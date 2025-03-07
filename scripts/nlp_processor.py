@@ -30,7 +30,7 @@ def GetSents(text):
 
 def GetEnts(text):
     doc = nlp(text)
-    entities = [(ent.text, ent.label_) for ent in doc.ents]
+    entities = [f"{ent.text} ({ent.label_})" for ent in doc.ents]
     txt = "\n".join(entities)
     return txt
 
