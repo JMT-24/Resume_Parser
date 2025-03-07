@@ -9,7 +9,7 @@ def ConvertDocument(filename):
 
     file = filename[6:(len(filename)-5)]
     
-    with open(f"../texts/{file}.txt", "w") as f:
+    with open(f"texts/{file}_docx.txt", "w", encoding="utf-8") as f:
         f.write(text)
 
 

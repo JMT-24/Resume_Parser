@@ -1,18 +1,24 @@
 import spacy
-
+# python -m spacy download en_core_web_md
 nlp = spacy.load("en_core_web_md")
 
-def DisplaySents(text):
+def DisplaySents(filename):
+    with open (filename, "r") as f:
+        text = f.read()
     doc = nlp(text)
     for sent in doc.sents:
         print(sent)
 
-def DisplayEnts(text):
+def DisplayEnts(filename):
+    with open(filename, "r") as f:
+        text = f.read()
     doc = nlp(text)
     for ent in doc.ents:
         print(ent.text, ent.label_)
     
-def DisplayTokenDetails(text):
+def DisplayTokenDetails(filename):
+    with open(filename, "r") as f:
+        text = f.read()
     doc = nlp(text)
     for sent in doc.sents:
         print("\n🔹 Sentence:", sent.text)
@@ -22,19 +28,25 @@ def DisplayTokenDetails(text):
         for token in sent:  
             print(f"{token.text:<15}{token.pos_:<10}{token.dep_:<15}{token.head}")
 
-def GetSents(text):
+def GetSents(filename):
+    with open(filename, "r") as f:
+        text = f.read()
     doc = nlp(text)
     sentences = [sent.text for sent in doc.sents]
     txt = "\n".join(sentences)
     return txt
 
-def GetEnts(text):
+def GetEnts(filename):
+    with open(filename, "r") as f:
+        text = f.read()
     doc = nlp(text)
     entities = [f"{ent.text} ({ent.label_})" for ent in doc.ents]
     txt = "\n".join(entities)
     return txt
 
-def GetTokenDetails(text):
+def GetTokenDetails(filename):
+    with open(filename, "r") as f:
+        text = f.read()
     doc = nlp(text)
 
     details = [] 

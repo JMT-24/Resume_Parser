@@ -4,19 +4,20 @@ sys.path.append("scripts")
 from docx_processor import ReadDocument, ConvertDocument, CreateTextFile ,CreateDocument
 from nlp_processor import DisplaySents, DisplayEnts, DisplayTokenDetails
 from nlp_processor import GetSents, GetEnts, GetTokenDetails
+from pdf_processor import ReadPDF, ConvertPDF
 
 
+# file = "files/hybrid_setup_letter.docx"
+# ReadDocument(file)
 
-#ReadDocument("files/hybrid_setup_letter.docx")
+filename = "texts/hybrid_setup_letter_pdf.txt"
 
-with open ("texts/hybrid_setup_letter.txt", "r") as f:
-    text = f.read()
+# DisplayTokenDetails(filename)
 
-# DisplayTokenDetails(text)
+txt = GetSents(filename)
+CreateTextFile(txt, f"{filename[6:(len(filename)-4)]}_sents.txt")
 
-# txt = GetTokenDetails(text)
-
-# txt = GetEnts(text)
-
-txt = GetSents(text)
-CreateTextFile(txt, "Ents.txt")
+# filename = "files/hybrid_setup_letter.docx"
+# ReadPDF(filename)
+# ConvertPDF(filename)
+# ConvertDocument(filename)
