@@ -1,23 +1,15 @@
 import sys
 sys.path.append("scripts")
 
-from docx_processor import ReadDocument, ConvertDocument, CreateTextFile ,CreateDocument
-from nlp_processor import DisplaySents, DisplayEnts, DisplayTokenDetails
-from nlp_processor import GetSents, GetEnts, GetTokenDetails
-from pdf_processor import ReadPDF, ConvertPDF
+from nlp_processor import DisplaySents, DisplayEnts, DisplayTokenDetails, GetSents, GetEnts, GetTokenDetails
+from file_processor import DOCtoText, PDFtoText, CreateTextFile
 
 
-# file = "files/hybrid_setup_letter.docx"
-# ReadDocument(file)
+filename = "files/CV-Juan-Miguel-C.-Torres.docx"
 
-filename = "texts/hybrid_setup_letter_pdf.txt"
+# DOCtoText(filename)
 
-# DisplayTokenDetails(filename)
+docfile = f"texts/{filename[6:(len(filename)-5)]}_docx.txt"
 
-txt = GetSents(filename)
-CreateTextFile(txt, f"{filename[6:(len(filename)-4)]}_sents.txt")
-
-# filename = "files/hybrid_setup_letter.docx"
-# ReadPDF(filename)
-# ConvertPDF(filename)
-# ConvertDocument(filename)
+txt = GetEnts(docfile)
+CreateTextFile(txt, f"{docfile[6:(len(docfile)-4)]}_ents.txt")
