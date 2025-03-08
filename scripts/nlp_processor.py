@@ -1,3 +1,4 @@
+import asyncio
 import spacy
 # python -m spacy download en_core_web_md
 nlp = spacy.load("en_core_web_md")
@@ -28,23 +29,25 @@ def DisplayTokenDetails(filename):
         for token in sent:  
             print(f"{token.text:<15}{token.pos_:<10}{token.dep_:<15}{token.head}")
 
-def GetSents(filename):
+async def GetSents(filename):
     with open(filename, "r") as f:
         text = f.read()
     doc = nlp(text)
     sentences = [sent.text for sent in doc.sents]
     txt = "\n".join(sentences)
+    print("Sents generated")
     return txt
 
-def GetEnts(filename):
+async def GetEnts(filename):
     with open(filename, "r") as f:
         text = f.read()
     doc = nlp(text)
     entities = [f"{ent.text} ({ent.label_})" for ent in doc.ents]
     txt = "\n".join(entities)
+    print("Entity labeling are generated")
     return txt
 
-def GetTokenDetails(filename):
+async def GetTokenDetails(filename):
     with open(filename, "r") as f:
         text = f.read()
     doc = nlp(text)
@@ -60,4 +63,5 @@ def GetTokenDetails(filename):
             details.append(f"{token.text:<15}{token.pos_:<10}{token.dep_:<15}{token.head}")
 
     txt = "\n".join(details)
+    print("Token Details generated")
     return txt
