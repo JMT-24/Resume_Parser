@@ -1,0 +1,18 @@
+[
+    {
+        "text": "John Doe is a Software Engineer at Google.",
+        "entities": [[0, 8, "CANDIDATE_NAME"], [12, 28, "JOB_TITLE"], [32, 38, "COMPANY"]]
+    },
+    {
+        "text": "He is proficient in Python and Django.",
+        "entities": [[19, 25, "SKILLS"], [30, 36, "SKILLS"]]
+    },
+    {
+        "text": "He graduated from MIT in 2022.",
+        "entities": [[18, 21, "EDUCATION"], [25, 29, "DATES"]]
+    },
+    {
+        "text": "His email is johndoe@email.com and phone number is +1 234 567 8900.",
+        "entities": [[13, 32, "EMAIL"], [53, 69, "PHONE"]]
+    }
+]
