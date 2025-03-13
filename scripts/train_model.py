@@ -20,8 +20,7 @@ print("Loading trainig data")
 doc_bin = spacy.tokens.DocBin().from_disk("../data/train_data.spacy")
 examples = []
 for doc in doc_bin.get_docs(nlp.vocab):
-    example = Example.from_dict(doc, {"entities": [(ent.start_char, ent.end_char, ent.label_)
-                                                   for ent in doc.ents]})
+    example = Example(doc, doc)  # Corrected entity annotation
     examples.append(example)
 
 
@@ -29,9 +28,9 @@ for doc in doc_bin.get_docs(nlp.vocab):
 print(" train the model")
 other_pipes = [pipe for pipe in nlp.pipe_names if pipe != "ner"]
 with nlp.disable_pipes(*other_pipes):
-    optimizer = nlp.begin_training()
+    optimizer = nlp.resume_training()
 
-    epochs = 50
+    epochs = 100
 
     for epoch in range(epochs):
         random.shuffle(examples)
@@ -40,7 +39,7 @@ with nlp.disable_pipes(*other_pipes):
         # use minibatch to break data into smaller sets
         batches = minibatch(examples, size=8)
         for batch in batches:
-            nlp.update(batch, drop=0.5, losses=losses) # drop means dropout that prevents overfitting
+            nlp.update(batch, losses=losses, drop=0.4) # drop means dropout that prevents overfitting
 
         print(f"Epoch: {epoch + 1} / {epochs} - Loss: {losses}")
 

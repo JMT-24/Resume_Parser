@@ -8,10 +8,10 @@ with open ("../data/train_data.json", "r", encoding="utf-8") as f:
     TRAIN_DATA = json.load(f)
 
 # convert data into spacy format
-doc_bin = DocBin
+doc_bin = DocBin()
 for item in TRAIN_DATA:
     text = item["text"]
-    entities = item[entities]
+    entities = item["entities"]
 
     doc = nlp.make_doc(text)
     ents =[]
