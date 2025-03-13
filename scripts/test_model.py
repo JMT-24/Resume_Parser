@@ -4,31 +4,46 @@ print("loading trained model")
 nlp = spacy.load("../models/resume_parser_model")
 
 test_texts = [
-    "John Smith works as a Machine Learning Engineer at Google.",
-    "Alice Johnson is a Senior Software Engineer at Amazon.",
+    # Standard resume-like sentences
+    "John Smith is a Machine Learning Engineer at Google.",
+    "Alice Johnson, Senior Software Engineer @ Amazon.",
     "Michael Lee recently got hired by OpenAI as a Research Scientist.",
-    "Sarah Connor is currently working at Tesla as a Robotics Engineer.",
-    "He has expertise in Python, TensorFlow, and NLP.",
-    "Her key skills include JavaScript, React, and UI/UX Design.",
-    "Expert in Kubernetes, Docker, and Cloud Computing.",
-    "Highly skilled in Deep Learning and Neural Networks.",
-    "He graduated from Stanford University in 2019.",
-    "She earned her Computer Science degree from Harvard in 2021.",
-    "Completed an MBA at Wharton School in 2018.",
-    "Studied Artificial Intelligence at MIT in 2023.",
-    "You can contact me at john.doe@email.com or +1 123 456 7890.",
-    "Reach out to Sarah at sarah.connor@example.com or call +44 9876 543210.",
-    "Feel free to email me at techguy42@techmail.com.",
-    "Phone: +91 99999 88888, Email: research.scientist@aiworld.com.",
-    "Microsoft is looking to hire a Data Analyst for their AI team.",
-    "Amazon has an open position for a Full Stack Developer.",
-    "Apple is recruiting a Security Engineer for its iOS division.",
-    "Meta recently posted a job opening for a Cloud Architect.",
-    "Name: Robert Downey Jr.\nJob Title: Cybersecurity Engineer\nCompany: Tesla\nSkills: Ethical Hacking, Penetration Testing, Network Security",
-    "Contact Info: susan.wilson@workmail.com | +33 765432189\nExperience: Data Engineer at Google (2020 - Present)",
-    "Maria Gonzales | Senior Product Manager | Facebook\nEducation: MBA from Stanford, 2016\nSkills: Agile, Scrum, Market Research",
-    "Resume: \nName: Daniel Brown\nEmail: daniel.brown@email.com\nPhone: +49 123 456 789\nEducation: MIT, 2022\nExperience: Software Engineer at Apple"
+    "Sarah Connor - Robotics Engineer, currently working at Tesla.",
+    
+    # Unstructured & informal resume data
+    "Python expert | Google | 5 years experience.",
+    "AI specialist. Previously: Microsoft, OpenAI.",
+    "Skills: JavaScript, React, UI/UX. Contact: techguy42@techmail.com.",
+    "Graduated Stanford University, 2019. Ex-Facebook.",
+    
+    # Contact information in different formats
+    "You can reach me at john.doe@email.com | +1 123 456 7890.",
+    "Sarah's contact: sarah.connor@example.com | Ph: +44 9876 543210.",
+    "Email: research.scientist@aiworld.com | Phone: +91 99999 88888.",
+    
+    # International names & companies
+    "René Dupont is a Data Scientist at BNP Paribas in France.",
+    "Carlos Martínez | Backend Developer | Mercado Libre.",
+    "Akira Takahashi works at Sony as a Robotics Engineer.",
+    
+    # Job postings
+    "Microsoft is hiring a Data Analyst for its AI team.",
+    "Amazon seeks a Full Stack Developer.",
+    "Apple is looking for a Security Engineer in its iOS division.",
+    "Meta recently announced a Cloud Architect opening.",
+    
+    # Messy, informal, and typo cases
+    "Johhn Smitth is a ML Eng. @ Gogle",
+    "Michael, Lee got hired - OpenAI (Research Scientist).",
+    "Sr. Software Eng. at MSFT.",
+    
+    # Resume-style structured entries
+    "Name: Robert Downey Jr.\nJob: Cybersecurity Engineer\nCompany: Tesla\nSkills: Ethical Hacking, Pen Testing",
+    "Contact Info: susan.wilson@workmail.com | +33 765432189\nExperience: Data Engineer @ Google (2020 - Present)",
+    "Maria Gonzales | Senior Product Manager | Facebook\nEducation: MBA - Stanford, 2016\nSkills: Agile, Scrum, Market Research",
+    "Resume:\nName: Daniel Brown\nEmail: daniel.brown@email.com\nPhone: +49 123 456 789\nEducation: MIT, 2022\nExperience: Software Engineer - Apple"
 ]
+
 
 for text in test_texts:
     doc = nlp(text)
