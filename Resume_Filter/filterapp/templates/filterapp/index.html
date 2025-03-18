@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Filter</title>
+    <link rel="stylesheet" href="{% static 'filterapp/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <!-- Drag & Drop Zone (Left) -->
+        <div class="drop-zone" id="drop-zone-left">
+            <p>Drop PDFs or DOCs Here</p>
+        </div>
+
+        <!-- Filter Button (Middle) -->
+        <div class="middle">
+            <button id="filter-btn">Filter</button>
+        </div>
+
+        <!-- Empty Drop Zone (Right) -->
+        <div class="drop-zone" id="drop-zone-right">
+            <p>Filtered Files Here</p>
+        </div>
+    </div>
+
+    <script>
+        // Drag and drop functionality
+        document.querySelectorAll(".drop-zone").forEach(zone => {
+            zone.addEventListener("dragover", (event) => {
+                event.preventDefault();
+                zone.classList.add("hover");
+            });
+
+            zone.addEventListener("dragleave", () => {
+                zone.classList.remove("hover");
+            });
+
+            zone.addEventListener("drop", (event) => {
+                event.preventDefault();
+                zone.classList.remove("hover");
+                alert("Files dropped!");
+            });
+        });
+    </script>
+</body>
+</html>
