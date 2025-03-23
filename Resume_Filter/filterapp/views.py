@@ -11,3 +11,9 @@ from django.views.decorators.csrf import csrf_exempt
 
 def index(request):
     return render(request, "filterapp/index.html")
+
+def upload(request):
+    if request.method == "POST":
+        file = request.FILES.get('file')
+        print(file)
+    return JsonResponse({1:True})
