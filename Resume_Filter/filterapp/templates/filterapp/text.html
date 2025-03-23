@@ -1,0 +1,17 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texts</title>
+</head>
+    <h1>This is The TEXT</h1>
+    <a href="{% url 'index' %}" >Back to index</a>
+    <hr>
+    <p>
+        {{ request.session.texts  }}
+    </p>
+</body>
+</html>

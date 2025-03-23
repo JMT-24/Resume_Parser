@@ -4,5 +4,6 @@ from . import views
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("upload/", views.upload, name="uploadDocument")
+    path("upload/", views.upload, name="uploadDocument"),
+    path("text/", views.text, name="text")
 ]
