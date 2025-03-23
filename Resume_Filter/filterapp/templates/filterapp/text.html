@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Texts</title>
 </head>
+<body>
     <h1>This is The TEXT</h1>
     <a href="{% url 'index' %}" >Back to index</a>
     <hr>
-    <p>
-        {{ request.session.texts  }}
-    </p>
+    {% for sentence in request.session.texts %}
+        <pre>{{ sentence }}</pre>
+    {% endfor %}
 </body>
 </html>

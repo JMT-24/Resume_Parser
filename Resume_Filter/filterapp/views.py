@@ -6,7 +6,7 @@ from django.http import JsonResponse
 from django.shortcuts import HttpResponse, HttpResponseRedirect, render
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
-from .utils import read_docs, read_pdf
+from .utils import read_docs, read_pdf, getSents
 
 # Create your views here.
 
@@ -18,11 +18,13 @@ def upload(request):
         return JsonResponse({"error": "POST request required."}, status=400)
     else:
         file = request.FILES.get('file')
-        texts = read_docs(file)
+        doc = read_docs(file)
+        texts = getSents(doc)
+        sentences = [sent.text for sent in texts]
         print("text is read")
 
          # Save texts in the session (since you can't pass variables via redirect)
-        request.session["texts"] = texts  
+        request.session["texts"] = sentences  
 
         return JsonResponse({"redirect_url": reverse("text")})  # Redirect to text.html
 
